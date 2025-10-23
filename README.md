@@ -1,6 +1,6 @@
 # Mini Project Challenge
 
-## 🏆 ArisePreQ: Loan Pre-Approval Challenge
+## 🏆 Loan Pre-Approval Challenge
 
 Welcome to the **Arise Loan Pre-Approval/Pre-Qualification System (ArisePreQ)** challenge. Your task is to design and implement a small-scale system that allows users to submit loan applications and receive instant pre-qualification decisions — **with both frontend and backend** by using the technologies and practices we use in our organization.
 
