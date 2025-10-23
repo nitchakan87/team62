@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: team062
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: team062-backend
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 30090
+          envFrom:
+            - configMapRef:
+                name: backend-config
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 30090
+            initialDelaySeconds: 60
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 30090
+            initialDelaySeconds: 90
+            periodSeconds: 10
+          resources:
+            requests:
+              memory: "512m"
+              cpu: "500m"
+            limits:
+              memory: "2Gi"
+              cpu: "2000m"

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title class="dialog-title">
+   Loan Application Result
+</h2>
+
+<mat-dialog-content class="dialog-content">
+  <p *ngIf="data.eligible">You're eligible for the loan!</p>
+  <p *ngIf="!data.eligible" class="rejected">
+    Not eligible: {{ data.reason }}
+  </p>
+</mat-dialog-content>
+
+<mat-dialog-actions class="dialog-actions">
+  <button mat-flat-button color="primary" mat-dialog-close>
+    Close
+  </button>
+</mat-dialog-actions>

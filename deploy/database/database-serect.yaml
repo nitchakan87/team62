@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-secret
+  namespace: team062
+type: Opaque
+data:
+  POSTGRES_PASSWORD: bXlzZWN1cmVwYXNzd29yZA== # base64 encoded "mysecurepassword"

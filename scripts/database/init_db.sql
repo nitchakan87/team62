@@ -1,0 +1,16 @@
+
+CREATE TABLE IF NOT EXISTS loan (
+    id VARCHAR(36) PRIMARY KEY,
+    full_name VARCHAR(255) ,
+    monthly_income INT ,
+    loan_amount INT,
+    loan_purpose VARCHAR(100),
+    age INT,
+    phone_number VARCHAR(10),
+    email VARCHAR(100),
+    eligible BOOLEAN,
+    reason VARCHAR(255),
+    created_date TIMESTAMP,
+    updated_date TIMESTAMP
+);
+

@@ -1,0 +1,38 @@
+.dialog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a4eb4;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.dialog-content {
+  font-size: 1rem;
+  color: #333;
+  padding: 1rem 0;
+  text-align: center;
+
+  .rejected {
+    color: #c62828;
+    font-weight: bold;
+  }
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  button {
+    background-color: #0066cc;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    text-transform: none;
+
+    &:hover {
+      background-color: #004fa3;
+    }
+  }
+}
